@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TwitterClient</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="For_You_fragment">For You fragment</string>
+    <string name="Trending_fragment">Trending fragment</string>
+    <string name="News_fragment">News fragment</string>
+    <string name="Sport_fragment">Sport fragment</string>
+    <string name="Entertainment_fragment">Entertainment fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
