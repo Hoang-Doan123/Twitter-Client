@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">TabLayout</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="search_fragment">Search Fragment</string>
+    <string name="slash_fragment">Slash Fragment</string>
+    <string name="community_fragment">Community Fragment</string>
+    <string name="notification_fragment">Notification Fragment</string>
+    <string name="email_fragment">Email Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="img_title1">User Name 1</string>
+    <string name="img_title2">User Name 2</string>
+    <string name="img_title3">User Name 3</string>
+    <string name="img_title4">User Name 4</string>
+    <string name="img_title5">User Name 5</string>
+    <string name="img_sub_title1">Sub-Title 1</string>
+    <string name="img_sub_title2">Sub-Title 2</string>
+    <string name="img_sub_title3">Sub-Title 3</string>
+    <string name="img_sub_title4">Sub-Title 4</string>
+    <string name="img_sub_title5">Sub-Title 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
