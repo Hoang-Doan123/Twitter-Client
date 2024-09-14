@@ -34,6 +34,7 @@ public class CommunityFragment extends Fragment {
     private ViewPager viewPager;
     private View mview;
 
+
     public CommunityFragment() {
         // Required empty public constructor
     }

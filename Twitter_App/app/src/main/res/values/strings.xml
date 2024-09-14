@@ -21,4 +21,37 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="app_name_user">Twitter</string>
+
+    <string name="app_Profile">Profile</string>
+    <string name="app_Premium">Premium</string>
+    <string name="app_Bookmarks">Bookmarks</string>
+    <string name="app_Jobs">Jobs</string>
+    <string name="app_Lists">Lists</string>
+    <string name="app_Spaces">Spaces</string>
+    <string name="app_Monetization">Monetization</string>
+    <string name="app_SettingsandSupport">Settings and Support</string>
+    <string name="app_SettingsandPrivacy">Settings and Privacy</string>
+    <string name="app_HelpCenter">Help Center</string>
+    <string name="app_Purchases">Purchases</string>
+
+    <string name="app_OpenDrawer">Open drawer</string>
+    <string name="app_CloseDrawer">Close drawer</string>
+
+
+    <string name="app_The_Design_Sphere">The Design Sphere</string>
+    <string name="app_2M_Members">2M Members</string>
+    <string name="app_Design">Design</string>
+
+
+    <string name="app_Feedback">Feedback</string>
+    <string name="app_1M_Members">1M Members</string>
+    <string name="app_Official">Official</string>
+
+
+    <string name="app_Apple">Apple</string>
+    <string name="app_10M_Members">10M Members</string>
+    <string name="app_Technology">Technology</string>
+
 </resources>

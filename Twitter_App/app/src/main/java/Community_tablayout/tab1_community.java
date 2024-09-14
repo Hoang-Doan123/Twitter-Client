@@ -1,14 +1,17 @@
 package Community_tablayout;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.example.tablayout.CommunitiesUser;
+import com.example.tablayout.CommunitiesUserAdapter;
 import com.example.tablayout.R;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +28,8 @@ public class tab1_community extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView rcvuser;
+    private CommunitiesUserAdapter communitiesUserAdapter;
 
     public tab1_community() {
         // Required empty public constructor
@@ -49,18 +54,29 @@ public class tab1_community extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab1_community, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab1_community, container, false);
+
+        // Initialize RecyclerView and its adapter here
+        rcvuser = view.findViewById(R.id.rcv_communities_user);
+        communitiesUserAdapter = new CommunitiesUserAdapter(getContext());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+        rcvuser.setLayoutManager(linearLayoutManager);
+        communitiesUserAdapter.setData(getListCommunitiesUser());
+        rcvuser.setAdapter(communitiesUserAdapter);
+
+        return view;
+    }
+
+    private List<CommunitiesUser> getListCommunitiesUser(){
+        List<CommunitiesUser> list = new ArrayList<>();
+        list.add(new CommunitiesUser(R.drawable.avatar_5, "user name 1", "10M Members", "Technology"));
+        list.add(new CommunitiesUser(R.drawable.avatar_3, "user name 2", "5M Members", "Health"));
+        list.add(new CommunitiesUser(R.drawable.avatar_6, "user name 3", "1M Members", "Education"));
+        list.add(new CommunitiesUser(R.drawable.avatar_7, "user name 4", "500K Members", "Art"));
+        list.add(new CommunitiesUser(R.drawable.avatar_9, "user name 5", "100K Members", "Travel"));
+        return list;
     }
 }
