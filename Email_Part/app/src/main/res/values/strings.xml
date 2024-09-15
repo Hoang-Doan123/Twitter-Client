@@ -18,5 +18,13 @@
     <string name="img_sub_title3">Sub-Title 3</string>
     <string name="img_sub_title4">Sub-Title 4</string>
     <string name="img_sub_title5">Sub-Title 5</string>
+    <string name="direct_mess">Find direct messages</string>
+    <string name="profile">User Profile</string>
+    <string name="find_message">Find Direct Message</string>
+    <string name="setting">Setting</string>
+    <string name="message">Message</string>
+    <string name="add_mail">Add message or group</string>
+    <string name="back">Back</string>
+    <string name="direct_messages">Direct Messages</string>
 
 </resources>
