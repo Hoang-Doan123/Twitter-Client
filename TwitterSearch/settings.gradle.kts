@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TwitterClient"
+rootProject.name = "TabLayout"
 include(":app")
+ 
