@@ -16,11 +16,11 @@ import com.google.android.material.tabs.TabLayout;
 
 public class HomeFragment extends Fragment {
 
-    private View view;
+    private View view, overlay;
     private ViewPager viewPager;
     private TabLayout tabLayoutTop;
     private FloatingActionButton addFab, imgFab, microFab, videocamFab;
-    private TextView imgFabText, microFabText, videocamFabText;
+    private TextView imgFabText, microFabText, videocamFabText, addPostFabText;
     private Boolean isFabVisible = false;
 
     @Override
@@ -29,37 +29,44 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
         // Declare views
+        overlay = getActivity().findViewById(R.id.overlay);
         tabLayoutTop = view.findViewById(R.id.tab_layout_top);
         viewPager = view.findViewById(R.id.home_view_pager);
 
-        addFab = view.findViewById(R.id.add_fab);
-        imgFab = view.findViewById(R.id.img_fab);
-        microFab = view.findViewById(R.id.micro_fab);
-        videocamFab = view.findViewById(R.id.videocam_fab);
+        addFab = getActivity().findViewById(R.id.add_fab);
+        imgFab = getActivity().findViewById(R.id.img_fab);
+        microFab = getActivity().findViewById(R.id.micro_fab);
+        videocamFab = getActivity().findViewById(R.id.videocam_fab);
 
-        imgFabText = view.findViewById(R.id.img_fab_text);
-        microFabText = view.findViewById(R.id.micro_fab_text);
-        videocamFabText = view.findViewById(R.id.videocam_fab_text);
+        addPostFabText = getActivity().findViewById(R.id.add_post_fab_text);
+        imgFabText = getActivity().findViewById(R.id.img_fab_text);
+        microFabText = getActivity().findViewById(R.id.micro_fab_text);
+        videocamFabText = getActivity().findViewById(R.id.videocam_fab_text);
 
         // Add adapter to viewpager
         HomeViewPagerAdapter adapter = new HomeViewPagerAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
         tabLayoutTop.setupWithViewPager(viewPager);
 
+        addFab.setVisibility(View.VISIBLE);
+
         // Make floating buttons & their text disappear
-        imgFab.setVisibility(View.GONE);
-        imgFabText.setVisibility(View.GONE);
-        microFab.setVisibility(View.GONE);
-        microFabText.setVisibility(View.GONE);
-        videocamFab.setVisibility(View.GONE);
-        videocamFabText.setVisibility(View.GONE);
+//        addPostFabText.setVisibility(View.GONE);
+//        imgFab.setVisibility(View.GONE);
+//        imgFabText.setVisibility(View.GONE);
+//        microFab.setVisibility(View.GONE);
+//        microFabText.setVisibility(View.GONE);
+//        videocamFab.setVisibility(View.GONE);
+//        videocamFabText.setVisibility(View.GONE);
 
         // Add onClick event for addFab
         addFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!isFabVisible) {
+                    overlay.setVisibility(View.VISIBLE);
                     addFab.setImageResource(R.drawable.add_post_icon);
+                    addPostFabText.setVisibility(View.VISIBLE);
                     imgFab.setVisibility(View.VISIBLE);
                     imgFabText.setVisibility(View.VISIBLE);
                     microFab.setVisibility(View.VISIBLE);
@@ -68,8 +75,27 @@ public class HomeFragment extends Fragment {
                     videocamFabText.setVisibility(View.VISIBLE);
                     isFabVisible = true;
                 }
-                else {
+//                else {
+//                    addFab.setImageResource(R.drawable.adding_icon);
+//                    addPostFabText.setVisibility(View.GONE);
+//                    imgFab.setVisibility(View.GONE);
+//                    imgFabText.setVisibility(View.GONE);
+//                    microFab.setVisibility(View.GONE);
+//                    microFabText.setVisibility(View.GONE);
+//                    videocamFab.setVisibility(View.GONE);
+//                    videocamFabText.setVisibility(View.GONE);
+//                    isFabVisible = false;
+//                }
+            }
+        });
+
+        overlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isFabVisible) {
+                    overlay.setVisibility(View.GONE);
                     addFab.setImageResource(R.drawable.adding_icon);
+                    addPostFabText.setVisibility(View.GONE);
                     imgFab.setVisibility(View.GONE);
                     imgFabText.setVisibility(View.GONE);
                     microFab.setVisibility(View.GONE);
