@@ -20,7 +20,7 @@
             android:id="@+id/twitter_icon"
             android:layout_width="17dp"
             android:layout_height="17dp"
-            android:src="@drawable/twitter_icon"
+            android:src="@drawable/avatar_6"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
 

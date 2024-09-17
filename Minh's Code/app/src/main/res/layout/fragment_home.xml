@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- Toolbar -->
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
@@ -21,47 +19,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Icon ở bên trái -->
             <ImageView
                 android:id="@+id/account_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/account_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
+            <!-- Icon ở giữa -->
             <ImageView
                 android:id="@+id/twitter_icon"
                 android:layout_width="17dp"
                 android:layout_height="17dp"
-                android:src="@drawable/twitter_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/avatar_5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
+            <!-- Icon ở bên phải -->
             <ImageView
                 android:id="@+id/more_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/more_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:tabSelectedTextColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/tool_bar"
-        app:tabSelectedTextColor="@color/white">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/for_you_tab_item"
@@ -79,103 +81,8 @@
         android:id="@+id/home_view_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout_top"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_layout_top" />
-
-    <!--  Floating Button -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="66dp"
-        android:backgroundTint="@color/light_blue"
-        app:srcCompat="@drawable/adding_icon"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:shapeAppearanceOverlay="@style/CircleImageView"
-        app:tint="@color/white"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/img_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="@color/white"
-        app:fabCustomSize="45dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toTopOf="@+id/add_fab"
-        app:layout_constraintEnd_toEndOf="@+id/add_fab"
-        app:shapeAppearanceOverlay="@style/CircleImageView"
-        app:srcCompat="@drawable/image_icon"
-        app:tint="@color/light_blue"/>
-
-    <TextView
-        android:id="@+id/img_fab_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Photos"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/img_fab"
-        app:layout_constraintEnd_toStartOf="@+id/img_fab"
-        app:layout_constraintTop_toTopOf="@+id/img_fab" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/micro_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/white"
-        app:fabCustomSize="45dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toTopOf="@+id/img_fab"
-        app:layout_constraintEnd_toEndOf="@+id/img_fab"
-        app:layout_constraintStart_toStartOf="@+id/img_fab"
-        app:shapeAppearanceOverlay="@style/CircleImageView"
-        app:srcCompat="@drawable/micro_icon"
-        app:tint="@color/light_blue"/>
-
-    <TextView
-        android:id="@+id/micro_fab_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Spaces"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/micro_fab"
-        app:layout_constraintEnd_toStartOf="@+id/micro_fab"
-        app:layout_constraintTop_toTopOf="@+id/micro_fab" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/videocam_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/white"
-        app:fabCustomSize="45dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toTopOf="@+id/micro_fab"
-        app:layout_constraintEnd_toEndOf="@+id/micro_fab"
-        app:layout_constraintStart_toStartOf="@+id/micro_fab"
-        app:shapeAppearanceOverlay="@style/CircleImageView"
-        app:srcCompat="@drawable/videocam_icon"
-        app:tint="@color/light_blue" />
-
-    <TextView
-        android:id="@+id/videocam_fab_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Go Live"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/videocam_fab"
-        app:layout_constraintEnd_toStartOf="@+id/videocam_fab"
-        app:layout_constraintTop_toTopOf="@+id/videocam_fab" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

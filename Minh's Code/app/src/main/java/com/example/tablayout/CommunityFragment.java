@@ -1,12 +1,17 @@
 package com.example.tablayout;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
+
+import Community_tablayout.CommunityViewPagerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,10 @@ public class CommunityFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private View mview;
+
 
     public CommunityFragment() {
         // Required empty public constructor
@@ -59,6 +68,19 @@ public class CommunityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_community, container, false);
+        mview = inflater.inflate(R.layout.fragment_community, container, false);
+
+        tabLayout = mview.findViewById(R.id.tab_layout_community);
+        viewPager= mview.findViewById(R.id.community_viewpager);
+
+        CommunityViewPagerAdapter adapter = new CommunityViewPagerAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        viewPager.setAdapter(adapter);
+
+        tabLayout.setupWithViewPager(viewPager);
+
+
+        return mview;
+
+
     }
 }
