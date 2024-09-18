@@ -2,14 +2,19 @@ package com.example.tablayout;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -22,6 +27,11 @@ public class HomeFragment extends Fragment {
     private FloatingActionButton addFab, imgFab, microFab, videocamFab;
     private TextView imgFabText, microFabText, videocamFabText, addPostFabText;
     private Boolean isFabVisible = false;
+
+    private TabLayout tabLayoutBot;
+    private Toolbar toolbar;
+    private RecyclerView recyclerView;
+    private PostAdapter postAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
