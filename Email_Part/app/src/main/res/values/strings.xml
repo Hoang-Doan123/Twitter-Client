@@ -44,4 +44,6 @@
     <string name="help_center">Help Center</string>
     <string name="openDrawer">Drawer Opened</string>
     <string name="closeDrawer">Drawer Closed</string>
+    <string name="email_setting">Email Setting</string>
+    <string name="create_group">Create a group</string>
 </resources>

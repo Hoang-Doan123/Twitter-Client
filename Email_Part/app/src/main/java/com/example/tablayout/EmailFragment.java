@@ -105,19 +105,19 @@ public class EmailFragment extends Fragment implements NavigationView.OnNavigati
             startActivity(intent);
         });
 
-        ImageButton settingButton = view.findViewById(R.id.setting_icon);
-        settingButton.setOnClickListener(v -> {
-            // Switch to SettingActivity
-            Intent intent = new Intent(requireContext(), SettingActivity.class);
-            startActivity(intent);
-        });
-
-        ImageButton profileButton = view.findViewById(R.id.account_icon);
-        profileButton.setOnClickListener(v -> {
-            // Switch to AccountActivity
-            Intent intent = new Intent(requireContext(), SettingActivity.class);
-            startActivity(intent);
-        });
+//        ImageButton settingButton = view.findViewById(R.id.setting_icon);
+//        settingButton.setOnClickListener(v -> {
+//            // Switch to SettingActivity
+//            Intent intent = new Intent(requireContext(), SettingActivity.class);
+//            startActivity(intent);
+//        });
+//
+//        ImageButton profileButton = view.findViewById(R.id.account_icon);
+//        profileButton.setOnClickListener(v -> {
+//            // Switch to AccountActivity
+//            Intent intent = new Intent(requireContext(), SettingActivity.class);
+//            startActivity(intent);
+//        });
 
         return view;
     }
