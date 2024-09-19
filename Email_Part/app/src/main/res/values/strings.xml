@@ -26,5 +26,22 @@
     <string name="add_mail">Add message or group</string>
     <string name="back">Back</string>
     <string name="direct_messages">Direct Messages</string>
-
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="messages_setting">Messages setting</string>
+    <string name="profile_info">Profile</string>
+    <string name="premium">Premium</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="lists">Lists</string>
+    <string name="spaces">Spaces</string>
+    <string name="monetization">Monetization</string>
+    <string name="username">Username</string>
+    <string name="following">X Following</string>
+    <string name="followers">Y Followers</string>
+    <string name="setting_and_support"><![CDATA[Settings & Support]]></string>
+    <string name="settings_privacy">Settings and Privacy</string>
+    <string name="help_center">Help Center</string>
+    <string name="openDrawer">Drawer Opened</string>
+    <string name="closeDrawer">Drawer Closed</string>
 </resources>

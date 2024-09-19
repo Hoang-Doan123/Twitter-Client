@@ -1,6 +1,7 @@
 package com.example.tablayout;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,16 @@ public class EmailAddActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageButton accountIcon = findViewById(R.id.account_icon);
+        accountIcon.setOnClickListener(v -> {
+            // Move back to EmailFragment
+            onBackPressed();
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
