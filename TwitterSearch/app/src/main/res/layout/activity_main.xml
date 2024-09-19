@@ -14,20 +14,7 @@
         app:layout_constraintBottom_toTopOf="@id/tab_layout_bot"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/black">
-
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@drawable/ic_add"
-            android:layout_gravity="bottom|right"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="60dp"
-            android:backgroundTint="#6256CA" />
-    </FrameLayout>
+        android:backgroundTint="@color/black"/>
 
     <!-- TabLayout Bottom -->
     <com.google.android.material.tabs.TabLayout
@@ -71,5 +58,117 @@
             android:icon="@drawable/email_icon"/>
 
     </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay"
+        android:visibility="gone"/>
+    <!--  Floating Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="66dp"
+        android:backgroundTint="@color/light_blue"
+        app:srcCompat="@drawable/ic_add"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        app:tint="@color/white"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/add_post_fab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Posts"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/add_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_fab"
+        android:visibility="gone"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/img_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/white"
+        app:fabCustomSize="45dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        app:srcCompat="@drawable/ic_image"
+        app:tint="@color/light_blue"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/img_fab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Photos"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/img_fab"
+        app:layout_constraintEnd_toStartOf="@+id/img_fab"
+        app:layout_constraintTop_toTopOf="@+id/img_fab"
+        android:visibility="gone"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/micro_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        app:fabCustomSize="45dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/img_fab"
+        app:layout_constraintEnd_toEndOf="@+id/img_fab"
+        app:layout_constraintStart_toStartOf="@+id/img_fab"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        app:srcCompat="@drawable/ic_mic"
+        app:tint="@color/light_blue"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/micro_fab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Spaces"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/micro_fab"
+        app:layout_constraintEnd_toStartOf="@+id/micro_fab"
+        app:layout_constraintTop_toTopOf="@+id/micro_fab"
+        android:visibility="gone"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/videocam_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        app:fabCustomSize="45dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/micro_fab"
+        app:layout_constraintEnd_toEndOf="@+id/micro_fab"
+        app:layout_constraintStart_toStartOf="@+id/micro_fab"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        app:srcCompat="@drawable/ic_stream"
+        app:tint="@color/light_blue"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/videocam_fab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Go Live"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/videocam_fab"
+        app:layout_constraintEnd_toStartOf="@+id/videocam_fab"
+        app:layout_constraintTop_toTopOf="@+id/videocam_fab"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
