@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_marginEnd="10dp"
+    app:layout_goneMarginEnd="10dp"
+    tools:context="Community_tablayout.tab2_community">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_food"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@drawable/button_border"
+                android:textColor="#FFFFFF"
+                android:text="Food"/>
+
+            <Button
+                android:id="@+id/btn_animal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:background="@drawable/button_border"
+                android:text="Animal"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_tech"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@drawable/button_border"
+                android:text="Tech"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_gaming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:background="@drawable/button_border"
+                android:text="Gaming"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_sports"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:background="@drawable/button_border"
+                android:textColor="#FFFFFF"
+                android:text="Sports"/>
+            <Button
+                android:id="@+id/btn_art"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@drawable/button_border"
+                android:textColor="#FFFFFF"
+                android:text="Art"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_explore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp" />
+
+
+
+</LinearLayout>
