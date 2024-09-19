@@ -122,7 +122,11 @@ public class NotificationFragment extends Fragment {
                 // Chuyển đến SettingFragment
                 Fragment settingFragment = new SettingsFragment();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+<<<<<<< HEAD
                 transaction.replace(R.id.fragment_container, settingFragment); // Thay đổi ID theo layout của bạn
+=======
+                transaction.add(R.id.fragment_container, settingFragment); // Thay đổi ID theo layout của bạn
+>>>>>>> cb08050 (Combine Search part and modify Notification part)
                 transaction.addToBackStack(null); // Thêm vào back stack
                 transaction.commit();
             }
