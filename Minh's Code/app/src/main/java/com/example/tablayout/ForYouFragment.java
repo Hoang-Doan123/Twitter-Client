@@ -65,13 +65,9 @@ public class ForYouFragment extends Fragment {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 if (dy > 0) {
-//                    toolbar.setVisibility(View.INVISIBLE);
-//                    tabLayoutTop.setVisibility(View.INVISIBLE);
                     tabLayoutBot.setVisibility(View.INVISIBLE);
                     addFab.hide();
                 } else {
-//                    toolbar.setVisibility(View.VISIBLE);
-//                    tabLayoutTop.setVisibility(View.VISIBLE);
                     tabLayoutBot.setVisibility(View.VISIBLE);
                     addFab.show();
                 }

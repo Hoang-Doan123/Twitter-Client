@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_blue">#66ccff</color>
     <color name="overlay">#D9000000</color>
+    <color name="blue">#03A9F4</color>
 </resources>

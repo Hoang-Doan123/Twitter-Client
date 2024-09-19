@@ -1,14 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/email_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EmailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/email_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/email_fragment" />
+        android:background="@color/black">
 
-</FrameLayout>
+        <!-- TODO: Update blank fragment layout -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_alignParentTop="true">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/black"
+                android:padding="16dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <!-- Left Icon -->
+                    <ImageView
+                        android:id="@+id/account_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@string/profile"
+                        android:src="@drawable/account_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <!-- Central Icon -->
+                    <ImageView
+                        android:id="@+id/twitter_icon"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/find_message"
+                        android:src="@drawable/find_message"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <!-- Right Icon -->
+                    <ImageButton
+                        android:id="@+id/setting_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@string/setting"
+                        android:src="@drawable/setting"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="53dp"
+            android:clickable="true"
+            android:contentDescription="@string/add_mail"
+            android:src="@drawable/mailadd" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:paddingTop="60dp"
+            android:paddingBottom="50dp">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/message1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message1" />
+
+                <ImageView
+                    android:id="@+id/message2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message2" />
+
+                <ImageView
+                    android:id="@+id/message3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="81dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message3" />
+
+                <ImageView
+                    android:id="@+id/message4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message4" />
+
+                <ImageView
+                    android:id="@+id/message5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message5"/>
+
+                <ImageView
+                    android:id="@+id/message6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message6"/>
+
+                <ImageView
+                    android:id="@+id/message7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message7"/>
+
+                <ImageView
+                    android:id="@+id/message8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message8"/>
+
+                <ImageView
+                    android:id="@+id/message9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message9"/>
+                <ImageView
+                    android:id="@+id/message10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message1" />
+
+                <ImageView
+                    android:id="@+id/message11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message2" />
+
+                <ImageView
+                    android:id="@+id/message12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="81dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message3" />
+
+                <ImageView
+                    android:id="@+id/message13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message4" />
+
+                <ImageView
+                    android:id="@+id/message14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message5"/>
+
+                <ImageView
+                    android:id="@+id/message15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message6"/>
+
+                <ImageView
+                    android:id="@+id/message16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message7"/>
+
+                <ImageView
+                    android:id="@+id/message17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message8"/>
+
+                <ImageView
+                    android:id="@+id/message18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/message9"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/black"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:headerLayout="@layout/profile_header"
+        app:menu="@menu/profile_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>
