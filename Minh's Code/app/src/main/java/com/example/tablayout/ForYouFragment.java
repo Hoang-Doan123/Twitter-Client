@@ -42,7 +42,7 @@ public class ForYouFragment extends Fragment {
         tabLayoutBot = getActivity().findViewById(R.id.tab_layout_bot);
 
         swipeRefreshLayout = view.findViewById(R.id.swipe_refresh_layout_for_you);
-        recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView = view.findViewById(R.id.recycler_view_for_you);
         addFab = getActivity().findViewById(R.id.add_fab);
 
         postAdapter = new PostAdapter();
