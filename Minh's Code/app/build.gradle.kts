@@ -29,6 +29,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -43,4 +46,5 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview-selection:1.1.0")
     implementation( "androidx.cardview:cardview:1.0.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
 }

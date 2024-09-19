@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TabLayout"
+rootProject.name = "Minh's Code"
 include(":app")
  
