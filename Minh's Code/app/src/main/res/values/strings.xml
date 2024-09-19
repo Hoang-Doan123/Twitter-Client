@@ -51,5 +51,7 @@
     <string name="app_Apple">Apple</string>
     <string name="app_10M_Members">10M Members</string>
     <string name="app_Technology">Technology</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

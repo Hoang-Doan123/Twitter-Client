@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Icon ở bên trái -->
+
             <ImageView
                 android:id="@+id/account_icon"
                 android:layout_width="wrap_content"
@@ -29,18 +29,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <!-- Icon ở giữa -->
+
             <ImageView
                 android:id="@+id/twitter_icon"
                 android:layout_width="17dp"
                 android:layout_height="17dp"
-                android:src="@drawable/avatar_5"
+                android:src="@drawable/twitter_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <!-- Icon ở bên phải -->
+
             <ImageView
                 android:id="@+id/more_icon"
                 android:layout_width="wrap_content"

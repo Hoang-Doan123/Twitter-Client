@@ -3,9 +3,12 @@ package com.example.tablayout;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -37,6 +40,8 @@ public class CommunityFragment extends Fragment  implements NavigationView.OnNav
     private ViewPager viewPager;
     private View mview;
     private DrawerLayout mDrawerLayout;
+    private MenuInflater inflater;
+    private Menu menu;
 
 
     public CommunityFragment() {
@@ -61,8 +66,13 @@ public class CommunityFragment extends Fragment  implements NavigationView.OnNav
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
+
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,10 +84,9 @@ public class CommunityFragment extends Fragment  implements NavigationView.OnNav
         viewPager= mview.findViewById(R.id.community_viewpager);
 
 
-
         CommunityViewPagerAdapter adapter = new CommunityViewPagerAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        viewPager.setAdapter(adapter);
 
+        viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
 
@@ -88,8 +97,7 @@ public class CommunityFragment extends Fragment  implements NavigationView.OnNav
 
         mDrawerLayout = mview.findViewById(R.id.Drawer_communities);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity(), mDrawerLayout, toolbar,R.string.app_OpenDrawer,R.string.app_CloseDrawer);
-
-            mDrawerLayout.addDrawerListener(toggle);
+        mDrawerLayout.addDrawerListener(toggle);
             toggle.syncState();
 
         NavigationView navigationView = mview.findViewById(R.id.navigation_view);
@@ -118,4 +126,7 @@ public class CommunityFragment extends Fragment  implements NavigationView.OnNav
 
 
         }
+
+    private void openFragment(SearchFragment searchFragment) {
     }
+}

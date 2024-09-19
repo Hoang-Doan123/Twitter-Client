@@ -6,7 +6,7 @@ public class CommunitiesUser {
     private String members;
     private String type;
 
-    public CommunitiesUser(int resourceId, String name, String s, String technology) {
+    public CommunitiesUser(int resourceId, String name, String members, String type) {
         this.resourceId = resourceId;
         this.name = name;
         this.members = members;

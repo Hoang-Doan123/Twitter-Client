@@ -75,11 +75,11 @@ public class tab1_community extends Fragment {
 
     private List<CommunitiesUser> getListCommunitiesUser(){
         List<CommunitiesUser> list = new ArrayList<>();
-        list.add(new CommunitiesUser(R.drawable.avatar_5, "user name 1", "10M Members", "Technology"));
-        list.add(new CommunitiesUser(R.drawable.avatar_3, "user name 2", "5M Members", "Health"));
-        list.add(new CommunitiesUser(R.drawable.avatar_6, "user name 3", "1M Members", "Education"));
-        list.add(new CommunitiesUser(R.drawable.avatar_7, "user name 4", "500K Members", "Art"));
-        list.add(new CommunitiesUser(R.drawable.avatar_9, "user name 5", "100K Members", "Travel"));
+        list.add(new CommunitiesUser(R.drawable.apple, "Apple", "10M Members", "Technology"));
+        list.add(new CommunitiesUser(R.drawable.sofware_engineering1, "Sofware Engineering ", "5M Members", "Sofware"));
+        list.add(new CommunitiesUser(R.drawable.xbox_communities, "Xbox Communities ", "1M Members", "Gaming"));
+        list.add(new CommunitiesUser(R.drawable.marvel, "Marvel", "90M Members", "Entertainment"));
+        list.add(new CommunitiesUser(R.drawable.avatar_9, "Cat Twitter", "5M Members", "Cat"));
         return list;
     }
 }

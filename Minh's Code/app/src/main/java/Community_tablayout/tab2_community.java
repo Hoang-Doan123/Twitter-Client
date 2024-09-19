@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tablayout.Food;
-import com.example.tablayout.FoodAdapter;
+import com.example.tablayout.Explore;
+import com.example.tablayout.ExploreAdapter;
 import com.example.tablayout.R;
 
 import java.util.ArrayList;
@@ -29,32 +29,22 @@ public class tab2_community extends Fragment implements View.OnClickListener{
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+
     private String mParam1;
     private String mParam2;
     private RecyclerView rcvFood;
-    private Button btnFood,btnAnimal,btnTech;
+    private Button btnFood,btnAnimal,btnTech,btn_art,btn_sports,btn_gaming;
     private LinearLayoutManager linearLayoutManager;
+
 
     public tab2_community() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment tab1_community.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static tab2_community newInstance(String param1, String param2) {
         tab2_community fragment = new tab2_community();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -77,62 +67,106 @@ public class tab2_community extends Fragment implements View.OnClickListener{
         btnFood = view.findViewById(R.id.btn_food);
         btnAnimal = view.findViewById(R.id.btn_animal);
         btnTech = view.findViewById(R.id.btn_tech);
+        btn_art = view.findViewById(R.id.btn_art);
+        btn_sports = view.findViewById(R.id.btn_sports);
+        btn_gaming = view.findViewById(R.id.btn_gaming);
 
         rcvFood = view.findViewById(R.id.rcv_explore);
 
         linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
         rcvFood.setLayoutManager(linearLayoutManager);
 
-        FoodAdapter adapter = new FoodAdapter(getListFood());
+        ExploreAdapter adapter = new ExploreAdapter(getListFood());
         rcvFood.setAdapter(adapter);
 
         btnFood.setOnClickListener(this);
         btnAnimal.setOnClickListener(this);
         btnTech.setOnClickListener(this);
+        btn_art.setOnClickListener(this);
+        btn_gaming.setOnClickListener(this);
+        btn_sports.setOnClickListener(this);
 
         return view;
     }
 
 
-    private List<Food> getListFood() {
-        List<Food> list= new ArrayList<>();
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
-        list.add(new Food(R.drawable.food1,Food.TYPE_food));
+    private List<Explore> getListFood() {
+        List<Explore> list= new ArrayList<>();
+        list.add(new Explore(R.drawable.food1, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food2, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food3, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food4, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food5, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food6, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food7, Explore.TYPE_food));
+        list.add(new Explore(R.drawable.food8, Explore.TYPE_food));
 
 
 
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
-        list.add(new Food(R.drawable.animal1,Food.TYPE_animal));
+
+        list.add(new Explore(R.drawable.animal1, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal2, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal3, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal4, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal5, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal6, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal7, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal8, Explore.TYPE_animal));
+        list.add(new Explore(R.drawable.animal9, Explore.TYPE_animal));
 
 
 
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
-        list.add(new Food(R.drawable.tech1,Food.TYPE_tech));
+        list.add(new Explore(R.drawable.tech1, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech9, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech2, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech3, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech4, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech5, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech6, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech7, Explore.TYPE_tech));
+        list.add(new Explore(R.drawable.tech10, Explore.TYPE_tech));
+
+
+
+        list.add(new Explore(R.drawable.art1, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art2, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art4, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art5, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art6, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art7, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art8, Explore.TYPE_art));
+        list.add(new Explore(R.drawable.art9, Explore.TYPE_art));
+
+
+
+
+        list.add(new Explore(R.drawable.sports1, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports2, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports3, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports4, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports5, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports6, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports7, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports8, Explore.TYPE_sports));
+        list.add(new Explore(R.drawable.sports9, Explore.TYPE_sports));
+
+
+
+        list.add(new Explore(R.drawable.game,  Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game1, Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game2, Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game3, Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game4, Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game5, Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game6, Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game7, Explore.TYPE_gaming));
+        list.add(new Explore(R.drawable.game8, Explore.TYPE_gaming));
+
+
+
 
         return list;
 
@@ -143,9 +177,15 @@ public class tab2_community extends Fragment implements View.OnClickListener{
         if (id == R.id.btn_food) {
             scrollToItem(0);
         } else if (id == R.id.btn_animal) {
-            scrollToItem(10);
+            scrollToItem(9);
         } else if (id == R.id.btn_tech) {
-            scrollToItem(20);
+            scrollToItem(19);
+        } else if (id == R.id.btn_art) {
+            scrollToItem(28);
+        } else if (id == R.id.btn_sports) {
+            scrollToItem(37);
+        } else if (id == R.id.btn_gaming) {
+            scrollToItem(46);
         }
     }
 
@@ -156,3 +196,5 @@ public class tab2_community extends Fragment implements View.OnClickListener{
         linearLayoutManager.scrollToPositionWithOffset(index,0);
     }
 }
+
+
