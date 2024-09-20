@@ -104,6 +104,12 @@ public class CommunityFragment extends Fragment  implements NavigationView.OnNav
         navigationView.setNavigationItemSelectedListener(this);
         return mview;
 
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_toolbar, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+
 
     }
 

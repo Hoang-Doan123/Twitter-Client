@@ -48,21 +48,21 @@ public class FollowingFragment extends Fragment {
         List<FollowingData> followingData = new ArrayList<>();
 
         List<Post> posts = new ArrayList<>();
+        posts.add(new Post(R.drawable.flying, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
         posts.add(new Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        posts.add(new Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        posts.add(new Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        posts.add(new Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        posts.add(new Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        posts.add(new Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
+        posts.add(new Post(R.drawable.dark, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
 
         List<CardFollow> cardFollows = new ArrayList<>();
         cardFollows.add(new CardFollow(R.drawable.ghost, "User Name 1", "@UserName1"));
+        cardFollows.add(new CardFollow(R.drawable.dragon, "User Name 1", "@UserName1"));
+        cardFollows.add(new CardFollow(R.drawable.dark, "User Name 1", "@UserName1"));
         cardFollows.add(new CardFollow(R.drawable.ghost, "User Name 1", "@UserName1"));
-        cardFollows.add(new CardFollow(R.drawable.ghost, "User Name 1", "@UserName1"));
-        cardFollows.add(new CardFollow(R.drawable.ghost, "User Name 1", "@UserName1"));
+        cardFollows.add(new CardFollow(R.drawable.dragon, "User Name 1", "@UserName1"));
+        cardFollows.add(new CardFollow(R.drawable.dark, "User Name 1", "@UserName1"));
 
         followingData.add(new FollowingData(FollowingDataAdapter.TYPE_POST, null, posts));
         followingData.add(new FollowingData(FollowingDataAdapter.TYPE_CARD_FOLLOW, cardFollows, null));
+        followingData.add(new FollowingData(FollowingDataAdapter.TYPE_POST, null, posts));
 
         return followingData;
     }
