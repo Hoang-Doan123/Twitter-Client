@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+            <item android:id="@+id/Profile"
+                android:title="@string/app_Profile"
+                android:icon="@drawable/ic_person_24"/>
+
+        <item android:id="@+id/Premium"
+            android:title="@string/app_Premium"
+            android:icon="@drawable/twitter_icon" />
+
+        <item
+            android:id="@+id/Bookmarks"
+            android:title="@string/app_Bookmarks"
+            android:icon="@drawable/ic_bookmark_border_24"/>
+
+        <item
+            android:id="@+id/Jobs"
+            android:title="@string/app_Jobs"
+            android:icon="@drawable/ic_work_outline_24"/>
+
+        <item android:id="@+id/Lists"
+            android:title="@string/app_Lists"
+            android:icon="@drawable/ic_list_24"/>
+
+        <item android:id="@+id/Spaces"
+            android:title="@string/app_Spaces"
+            android:icon="@drawable/ic_mic_none_24"/>
+
+        <item android:id="@+id/Monetization"
+            android:title="@string/app_Monetization"
+            android:icon="@drawable/ic_monetization_on_24"/>
+    </group>
+
+    <item
+        android:title="@string/app_SettingsandSupport">
+        <menu>
+            <item
+                android:id="@+id/SettingsandPrivacy"
+                android:title="@string/app_SettingsandPrivacy"
+                android:icon="@drawable/ic_settings_suggest_24"/>
+            <item
+                android:id="@+id/HelpCenter"
+                android:title="@string/app_HelpCenter"
+                android:icon="@drawable/ic_help_outline_24"/>
+            <item
+                android:id="@+id/Purchases"
+                android:title="@string/app_Purchases"
+                android:icon="@drawable/ic_shopping_cart_24"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/email_direct_mess_rlt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/email_border"
+        android:paddingLeft="26dp"
+        android:paddingRight="36dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/email_direct_mess_user_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            app:srcCompat="@drawable/electric" />
+
+        <TextView
+            android:id="@+id/email_direct_mess_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/email_direct_mess_user_avatar"
+            android:text="@string/img_title1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/email_direct_mess_verified_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/verified_icon"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/email_direct_mess_user_name" />
+
+        <TextView
+            android:id="@+id/email_direct_mess_post_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/email_direct_mess_user_avatar"
+            android:text="@hihihi"
+            android:textColor="#808080"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
