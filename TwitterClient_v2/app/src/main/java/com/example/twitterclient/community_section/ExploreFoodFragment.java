@@ -85,13 +85,13 @@ public class ExploreFoodFragment extends Fragment {
 
     private List<Post> getListPost() {
         List<Post> list = new ArrayList<>();
-        list.add(new Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        list.add(new Post(R.drawable.dark, R.drawable.img2, "User Name 2", "Subtitle 2", "11K", "15K"));
-        list.add(new Post(R.drawable.electric, R.drawable.img3, "User Name 3", "Subtitle 3", "17K", "30K"));
-        list.add(new Post(R.drawable.ghost, R.drawable.img4, "User Name 4", "Subtitle 4", "1.5K", "3K"));
-        list.add(new Post(R.drawable.flying, R.drawable.img5, "User Name 5", "Subtitle 5", "3.6K", "4K"));
-        list.add(new Post(R.drawable.dragon, R.drawable.img6, "User Name 6", "Subtitle 6", "570", "1K"));
-        list.add(new Post(R.drawable.electric, R.drawable.img7, "User Name 7", "Subtitle 7", "10K", "15K"));
+        list.add(new Post("User Name 1", "June 23","Subtitle 1", 12, 45, 123));
+        list.add(new Post("User Name 2", "June 23","Subtitle 2", 1, 12, 45));
+        list.add(new Post("User Name 3", "June 23","Subtitle 3", 3, 7, 23));
+        list.add(new Post("User Name 4", "June 23","Subtitle 4", 6, 5, 13));
+        list.add(new Post("User Name 5", "June 23","Subtitle 5", 44, 34, 123));
+        list.add(new Post("User Name 6", "June 23","Subtitle 6", 12, 1, 12));
+        list.add(new Post("User Name 7", "June 23","Subtitle 7", 3, 0, 1));
 
         return list;
     }

@@ -89,9 +89,9 @@ public class FollowingFragment extends Fragment {
         List<FollowingData> followingData = new ArrayList<>();
 
         List<com.example.twitterclient.home_section.Post> posts = new ArrayList<>();
-        posts.add(new com.example.twitterclient.home_section.Post(R.drawable.flying, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        posts.add(new com.example.twitterclient.home_section.Post(R.drawable.dragon, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
-        posts.add(new Post(R.drawable.dark, R.drawable.img1, "User Name 1", "Subtitle 1", "1.2K", "2K"));
+        posts.add(new Post("User Name 7", "June 23","Subtitle 7", 3, 0, 1));
+        posts.add(new Post("User Name 7", "June 23","Subtitle 7", 1, 3, 10));
+        posts.add(new Post("User Name 7", "June 23","Subtitle 7", 2, 1, 9));
 
         List<CardFollow> cardFollows = new ArrayList<>();
         cardFollows.add(new CardFollow(R.drawable.ghost, "User Name 1", "@UserName1"));
