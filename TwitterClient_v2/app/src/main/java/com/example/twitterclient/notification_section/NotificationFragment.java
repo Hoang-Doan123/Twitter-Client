@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.twitterclient.MainActivity;
 import com.example.twitterclient.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -23,8 +24,7 @@ public class NotificationFragment extends Fragment {
     private ViewPager viewPager;
     private TabLayout tabLayoutTop;
     private FloatingActionButton addFab;
-    private ImageView moreIcon;
-
+    private ImageView moreIcon, notificationAccountIcon;
     private Toolbar toolbar;
 
     @Override
@@ -37,12 +37,19 @@ public class NotificationFragment extends Fragment {
         tabLayoutTop = view.findViewById(R.id.notification_tab_layout_top);
         viewPager = view.findViewById(R.id.notification_view_pager);
         addFab = getActivity().findViewById(R.id.add_fab);
+        notificationAccountIcon = view.findViewById(R.id.notification_account_icon);
         moreIcon = view.findViewById(R.id.notification_more_icon);
 
         // Add adapter to viewpager
         NotificationViewPagerAdapter adapter = new NotificationViewPagerAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
         tabLayoutTop.setupWithViewPager(viewPager);
+
+        notificationAccountIcon.setOnClickListener(v -> {
+            if (getActivity() instanceof MainActivity) {
+                ((MainActivity) getActivity()).openDrawer();
+            }
+        });
 
         toolbar.setVisibility(View.GONE);
         addFab.setVisibility(View.VISIBLE);

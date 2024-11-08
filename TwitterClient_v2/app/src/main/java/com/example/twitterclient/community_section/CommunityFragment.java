@@ -10,7 +10,9 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.example.twitterclient.MainActivity;
 import com.example.twitterclient.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -22,6 +24,7 @@ public class CommunityFragment extends Fragment {
     private TabLayout tabLayoutTop;
     private Toolbar toolbar;
     private FloatingActionButton addFab;
+    private ImageView communityDehazeIcon;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,7 +34,14 @@ public class CommunityFragment extends Fragment {
         toolbar = getActivity().findViewById(R.id.tool_bar);
         tabLayoutTop = view.findViewById(R.id.community_tab_layout_top);
         viewPager = view.findViewById(R.id.community_view_pager);
+        communityDehazeIcon = view.findViewById(R.id.community_dehaze_icon);
         addFab = getActivity().findViewById(R.id.add_fab);
+
+        communityDehazeIcon.setOnClickListener(v -> {
+            if (getActivity() instanceof MainActivity) {
+                ((MainActivity) getActivity()).openDrawer();
+            }
+        });
 
         CommunityViewPagerAdapter adapter = new CommunityViewPagerAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);

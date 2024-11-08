@@ -13,7 +13,9 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.example.twitterclient.MainActivity;
 import com.example.twitterclient.R;
 import com.example.twitterclient.search_section.SearchPost;
 import com.example.twitterclient.search_section.SearchPostAdapter;
@@ -34,6 +36,7 @@ public class EmailFragment extends Fragment {
     private SwipeRefreshLayout swipeRefreshLayout;
     private EmailPostAdapter emailPostAdapter;
     private EmailDirectMessagesFragment emailDirectMessagesFragment;
+    private ImageView emailAccountIcon;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,6 +52,7 @@ public class EmailFragment extends Fragment {
 
         addFab = getActivity().findViewById(R.id.add_fab);
         emailFab = view.findViewById(R.id.email_fab);
+        emailAccountIcon = view.findViewById(R.id.email_account_icon);
 
         emailPostAdapter = new EmailPostAdapter();
 
@@ -57,6 +61,12 @@ public class EmailFragment extends Fragment {
 
         emailPostAdapter.setData(getListEmailPost());
         recyclerView.setAdapter(emailPostAdapter);
+
+        emailAccountIcon.setOnClickListener(v -> {
+            if (getActivity() instanceof MainActivity) {
+                ((MainActivity) getActivity()).openDrawer();
+            }
+        });
 
         toolbar.setVisibility(View.GONE);
         addFab.setVisibility(View.GONE);
