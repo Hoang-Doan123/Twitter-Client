@@ -20,11 +20,11 @@
 
 
     <EditText
-        android:id="@+id/et_emailaddress"
+        android:id="@+id/et_name"
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Email or Username"
+        android:hint="Username"
         android:inputType="text"
         android:background="@drawable/rounded_edittext"
         app:layout_constraintTop_toTopOf="parent"
@@ -41,18 +41,18 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:background="@drawable/rounded_edittext"
-        app:layout_constraintTop_toBottomOf="@id/et_username"
+        app:layout_constraintTop_toBottomOf="@id/et_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="30dp" />
 
     <!-- Phone number input -->
     <EditText
-        android:id="@+id/et_phone_number"
+        android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Phone number"
-        android:inputType="number"
+        android:hint="Email"
+        android:inputType="text"
         android:background="@drawable/rounded_edittext"
         app:layout_constraintTop_toBottomOf="@id/et_password"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:text="Sign up"
         android:backgroundTint="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/et_emailaddress"
+        app:layout_constraintTop_toBottomOf="@id/et_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="20dp" />
@@ -86,7 +86,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tv_login"
+            android:id="@+id/tv_go_to_login"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="4dp"
