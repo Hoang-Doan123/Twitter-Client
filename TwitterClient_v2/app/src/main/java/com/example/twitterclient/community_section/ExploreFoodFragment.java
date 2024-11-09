@@ -85,13 +85,13 @@ public class ExploreFoodFragment extends Fragment {
 
     private List<Post> getListPost() {
         List<Post> list = new ArrayList<>();
-        list.add(new Post("User Name 1", "June 23","Subtitle 1", 12, 45, 123));
-        list.add(new Post("User Name 2", "June 23","Subtitle 2", 1, 12, 45));
-        list.add(new Post("User Name 3", "June 23","Subtitle 3", 3, 7, 23));
-        list.add(new Post("User Name 4", "June 23","Subtitle 4", 6, 5, 13));
-        list.add(new Post("User Name 5", "June 23","Subtitle 5", 44, 34, 123));
-        list.add(new Post("User Name 6", "June 23","Subtitle 6", 12, 1, 12));
-        list.add(new Post("User Name 7", "June 23","Subtitle 7", 3, 0, 1));
+        list.add(new Post("Nguyen Phuong\n", "June 23","beef balls", 132, 45, 123));
+        list.add(new Post("Hania\n", "June 23","Smash or pass ", 891, 12, 451));
+        list.add(new Post("Thu Trang", "June 23","Honey Grilled chicken ", 993, 7, 234));
+        list.add(new Post("New Dawn", "June 23","How many eggs do you eat in one sitting?", 126, 5, 123));
+        list.add(new Post("\uD83D\uDD25\uD83C\uDF36\uFE0FCarl Sian\uD83C\uDF36\uFE0F\uD83D\uDD25", "June 23","\uD83D\uDD25Rise and shine, Hot Peppers Crew! \uD83C\uDF36\uFE0F☀\uFE0F ", 44, 34, 12312));
+        list.add(new Post("Rane", "June 23","Good food today", 122, 1, 1256));
+        list.add(new Post("BRASIL ", "June 23","Good morning: Italian Cappuccino. Enjoy ☕\uD83C\uDF05", 134, 0, 331));
 
         return list;
     }
