@@ -37,7 +37,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ForYouFragment extends Fragment {
-    private static final String URL = "http://192.168.56.1:8000/api/posts";
+    private static final String URL = "http://10.0.2.2:1000/api/posts";
 
     private View view;
     private TabLayout tabLayoutTop, tabLayoutBot;
