@@ -84,12 +84,12 @@ public class MyCommunitiesFragment extends Fragment {
 
     private List<MyCommunitiesPost> getListCommunitiesPost() {
         List<MyCommunitiesPost> list = new ArrayList<>();
-        list.add(new MyCommunitiesPost(R.drawable.dragon, "Apple", "10M Members", "Technology"));
-        list.add(new MyCommunitiesPost(R.drawable.dark, "Software Engineering", "5M Members", "Software"));
-        list.add(new MyCommunitiesPost(R.drawable.electric, "Xbox Community", "1M Members", "Gaming"));
-        list.add(new MyCommunitiesPost(R.drawable.dragon, "Apple", "10M Members", "Technology"));
-        list.add(new MyCommunitiesPost(R.drawable.dark, "Software Engineering", "5M Members", "Software"));
-        list.add(new MyCommunitiesPost(R.drawable.electric, "Xbox Community", "1M Members", "Gaming"));
+        list.add(new MyCommunitiesPost(R.drawable.discord, "Discord", "10M Members", "Discord"));
+        list.add(new MyCommunitiesPost(R.drawable.soft, "Software Engineering", "5M Members", "Software"));
+        list.add(new MyCommunitiesPost(R.drawable.xbox, "Xbox Community", "1M Members", "Gaming"));
+        list.add(new MyCommunitiesPost(R.drawable.apple, "Apple", "10M Members", "Technology"));
+        list.add(new MyCommunitiesPost(R.drawable.marvel, "Marvel", "5M Members", "Movie"));
+        list.add(new MyCommunitiesPost(R.drawable.food, "Food", "1M Members", "Food"));
 
 
         return list;
