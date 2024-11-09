@@ -39,8 +39,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         holder.postImg.setImageResource(post.getPostImg());
         holder.userName.setText(post.getUserName());
         holder.postTitle.setText(post.getPostTitle());
-        holder.commentAmount.setText(post.getCommentAmount());
-        holder.likeAmount.setText(post.getLikeAmount());
+        holder.commentAmount.setText(String.valueOf(post.getCommentAmount()));
+        holder.likeAmount.setText(String.valueOf(post.getLikeAmount()));
     }
 
     @Override
